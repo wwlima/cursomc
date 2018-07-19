@@ -13,14 +13,10 @@ public class CategoriaService {
 
 	@Autowired
 	private CategoriaRepository repo;
-	
-	/*// Inserts para testes do código.
-	insert into categoria (id,nome) values(1,'Informática');
-	insert into categoria (id,nome) values(2,'Escritório');
-	*/
+
 	public Categoria buscar(Integer id) {
 		Optional<Categoria> obj = repo.findById(id);
-		return obj.orElse(null);		
+		return obj.orElse(null);
 	}
-	
+
 }
